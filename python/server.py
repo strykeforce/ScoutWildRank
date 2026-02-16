@@ -29,7 +29,7 @@ Useful params:
 UPLOAD_PATH = 'uploads/'
 REPORT = True
 REPORT_FILE = 'reports.csv'
-PASSWORD = getenv('WILDRANK_PASSWORD')
+PASSWORD = getenv('SF_RANK_PASSWORD')
 
 
 # copy files that docker build copied from config/ back into config/
@@ -60,7 +60,7 @@ except:
 # report instance to official instance
 if REPORT:
     try:
-        requests.get(url='https://wildrank.app/report', params={'host': host, 'port': port})
+        requests.get(url='https://sf_rank.app/report', params={'host': host, 'port': port})
     except:
         pass
 
@@ -163,7 +163,7 @@ async def about():
         with open('scripts/pwa.js', 'r') as f:
             script = f.read()
             try:
-                release = re.search('const CACHE_NAME = \'wildrank-(.+?)\'', script).group(1)
+                release = re.search('const CACHE_NAME = \'sf_rank-(.+?)\'', script).group(1)
                 release = f'Release: {release}<br>'
             except AttributeError:
                 pass
@@ -172,10 +172,10 @@ async def about():
         <html lang="en">\
             <head>\
                 <meta charset="utf-8"/>\
-                <title>WildRank</title>\
+                <title>StrykeForceRank</title>\
             </head>\
             <body>\
-                <h1>WildRank</h1>\
+                <h1>StrykeForceRank</h1>\
                 server.py Python3 FastAPI POST server<br>\
                 2020-{dt.now().year} <a href="https://wildstang.org">WildStang Robotics Program</a><br>\
                 <a href="https://github.com/WildStang/WildRank">MPL Licensed on GitHub</a><br>\
@@ -351,10 +351,10 @@ async def custom_http_exception_handler(request, exc):
             <html lang="en">\
                 <head>\
                     <meta charset="utf-8"/>\
-                    <title>WildRank</title>\
+                    <title>StrykeForceRank</title>\
                 </head>\
                 <body>\
-                    <h1>WildRank</h1>\
+                    <h1>StrykeForceRank</h1>\
                     <h2>404 - Page Not Found</h2>\
                 </body>\
             </html>', status_code=404)

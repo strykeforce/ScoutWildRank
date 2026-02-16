@@ -29,7 +29,7 @@ function init_page()
         navigator.serviceWorker.addEventListener('message', e => {
             if (e.data.msg === 'version')
             {
-                let version = e.data.version.replace('wildrank-', '')
+                let version = e.data.version.replace('sf_rank-', '')
                 let header = document.getElementById('header_info')
                 header.innerText = version
                 header.onclick = () => window_open('index.html?page=about', '_blank')

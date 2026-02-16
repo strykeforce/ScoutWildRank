@@ -96,7 +96,7 @@ window.addEventListener('load', event => {
         {
             if (!sessionStorage.getItem('dismiss_warning'))
             {
-                let title = typeof cfg.settings.title === 'undefined' ? 'WildRank' : cfg.settings.title
+                let title = typeof cfg.settings.title === 'undefined' ? 'StrykeForceRank' : cfg.settings.title
                 let notification = document.getElementById('warning_notification')
                 notification.innerText = `${title} is opened in ${display_mode}. Data may be lost!`
                 notification.style.transform = 'translate(0%)'

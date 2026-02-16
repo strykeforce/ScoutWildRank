@@ -5,7 +5,7 @@
  * date:        2022-01-21
  */
 
-const CACHE_NAME = 'wildrank-4.1.4'
+const CACHE_NAME = 'StrykeForceRank-26.0.0'
 const CACHE_LIST = [
     // html files
     '/',

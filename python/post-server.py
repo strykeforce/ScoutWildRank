@@ -63,7 +63,7 @@ class ServerHandler(http.server.SimpleHTTPRequestHandler):
                 with open('pwa.js', 'r') as f:
                     script = f.read()
                     try:
-                        release = re.search('const CACHE_NAME = \'wildrank-(.+?)\'', script).group(1)
+                        release = re.search('const CACHE_NAME = \'sf_rank-(.+?)\'', script).group(1)
                         release = f'Release: {release}<br>'
                     except AttributeError:
                         pass
@@ -72,10 +72,10 @@ class ServerHandler(http.server.SimpleHTTPRequestHandler):
                         <html lang="en">\
                             <head>\
                                 <meta charset="utf-8"/>\
-                                <title>WildRank</title>\
+                                <title>StrykeForceRank</title>\
                             </head>\
                             <body>\
-                                <h1>WildRank</h1>\
+                                <h1>StrykeForceRank</h1>\
                                 post-server.py Python3 POST server<br>\
                                 2020-{dt.now().year} <a href="https://wildstang.org">WildStang Robotics Program</a><br>\
                                 <a href="https://github.com/WildStang/WildRank">MPL Licensed on GitHub</a><br>\
@@ -109,7 +109,7 @@ class ServerHandler(http.server.SimpleHTTPRequestHandler):
             self.send_response(404)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            self.wfile.write(str.encode('<!DOCTYPE html><html lang="en"><html><head><meta charset="utf-8"/><title>WildRank</title></head><body><h1>WildRank - 404</h1>{0} not found!</body></html>'.format(self.path)))
+            self.wfile.write(str.encode('<!DOCTYPE html><html lang="en"><html><head><meta charset="utf-8"/><title>StrykeForceRank</title></head><body><h1>StrykeForceRank - 404</h1>{0} not found!</body></html>'.format(self.path)))
 
     # allow requests without credentials
     def end_headers (self):

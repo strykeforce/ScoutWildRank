@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "WildRank",
-    "short_name": "WildRank",
-    "description": "A FIRST Robotics Competition scouting application developed by the WildStang Robotics Program (FRC teams 111 & 112). WildRank is an offline cross-platform application and does not require a custom server.",
+    "name": "StrykeForceRank",
+    "short_name": "StrykeForceRank",
+    "description": "A FIRST Robotics Competition scouting application developed by the Stryke Force FRC team 2767. Based on WildRank from the WildStang Robotics Program.",
 	"categories": ["tools", "productivity", "sports"],
     "icons": [
         {

@@ -1,7 +1,7 @@
 {
 	"settings": {
-		"title": "WildRank",
-		"team_number": 111,
+		"title": "StrykeForceRank",
+		"team_number": 2767,
 		"time_format": 12,
 		"use_images": true,
 		"use_team_color": true,
@@ -21,7 +21,7 @@
 		}
 	},
 	"keys": {
-		"tba": "",
+		"tba": "S7GUI8vjqqcOAky6PhlvSNlqljk6lvgUfvs0yxMsq1VdGrmiaTMLSabHGpYO7cuB",
 		"server": ""
 	},
 	"theme": {
