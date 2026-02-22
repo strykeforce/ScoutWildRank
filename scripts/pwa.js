@@ -112,7 +112,7 @@ const CACHE_LIST = [
     '/assets/wheels/TPU.png',
     '/assets/wheels/Treaded.png',
     // configs
-    '/config/2025-config.json',
+    '/config/2026-config.json',
     '/config/settings-config.json',
     // other files
     '/favicon.ico',
