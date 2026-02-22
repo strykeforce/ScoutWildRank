@@ -87,7 +87,7 @@ const CACHE_LIST = [
     '/scripts/misc/score-counter.js',
     '/scripts/misc/team-profile.js',*/
     '/scripts/misc/2025-audit.js',
-    '/scripts/misc/2025-score-calculator.js',
+    '/scripts/misc/2026-score-calculator.js',
     '/scripts/misc/test.js',
     // assets
     '/assets/2025/algae.png',
