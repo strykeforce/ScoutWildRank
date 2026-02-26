@@ -64,17 +64,11 @@
                     "id": "match_auto_fuel_scoring",
                     "inputs": [
                         {
-                            "type": "multicounter",
-                            "negative": [
-                                false,
-                                true
-                            ],
+                            "type": "number",
+                            "negative": "false",
                             "default": 0,
                             "disallow_default": false,
-                            "options": [
-                                "Made",
-                                "Missed"
-                            ],
+                            "options": [ 0, 100 ],
                             "name": "Fuel Scored (A)",
                             "id": "match_auto_fuel_scoring_level_scored"
                         }
@@ -106,17 +100,11 @@
                     "id": "match_tele_op_fuel_scoring",
                     "inputs": [
                         {
-                            "type": "multicounter",
-                            "negative": [
-                                false,
-                                true
-                            ],
+                            "type": "number",
+                            "negative": "false",
                             "default": 0,
                             "disallow_default": false,
-                            "options": [
-                                "Made",
-                                "Missed"
-                            ],
+                            "options": [ 0, 500 ],
                             "name": "Fuel Scored (T)",
                             "id": "match_tele_op_fuel_scoring_level_scored"
                         }
@@ -128,9 +116,13 @@
                     "id": "match_tele_op_fuel_passing",
                     "inputs": [
                         {
-                            "type": "counter",
+                            "type": "number",
+                            "negative": "false",
                             "default": 0,
-                            "negative": false
+                            "disallow_default": false,
+                            "options": [ 0, 500 ],
+                            "name": "Fuel Passed",
+                            "id": "match_tele_op_fuel_passing_level_scored"
                         }
                     ]
                 },
@@ -210,23 +202,11 @@
                     "id": "pit_pit_autos",
                     "inputs": [
                         {
-                            "type": "number",
-                            "default": 0,
-                            "negative": false,
+                            "type": "text",
+                            "default": " ",
                             "disallow_default": false,
-                            "options": [
-                                0,
-                                10
-                            ],
-                            "name": "Fuel Scored (A)",
-                            "id": "pit_pit_autos_fuel_scored"
-                        },
-                        {
-                            "name": "Auto Climb",
-                            "id": "pit_pit_autos_auto_climb",
-                            "type": "checkbox",
-                            "default": false,
-                            "negative": false
+                            "name": "Auto Paths",
+                            "id": "pit_pit_autos_paths"
                         }
                     ]
                 },
@@ -236,18 +216,13 @@
                     "id": "pit_pit_capabilities",
                     "inputs": [
                         {
-                            "type": "multiselect",
-                            "default": [
-                                false,
-                                false
-                            ],
+                            "type": "number",
+                            "negative": "false",
+                            "default": 0,
                             "disallow_default": false,
-                            "options": [
-                                "Loading Station",
-                                "Floor"
-                            ],
-                            "name": "Coral Intake",
-                            "id": "pit_pit_capabilities_coral_intake"
+                            "options": [ 0, 200 ],
+                            "name": "Hopper Capacity",
+                            "id": "pit_pit_capabilities_hopper_capacity"
                         }
                     ]
                 },
@@ -281,200 +256,6 @@
                             "id": "pit_pit_pit_notes",
                             "type": "text",
                             "default": " "
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Tech",
-            "id": "pit_tech",
-            "columns": [
-                {
-                    "cycle": false,
-                    "name": "Mechanical Quality",
-                    "id": "pit_tech_mech",
-                    "inputs": [
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Accessibility",
-                            "id": "pit_tech_mech_accessibility"
-                        },
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Construction",
-                            "id": "pit_tech_mech_construction"
-                        },
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Low CG",
-                            "id": "pit_tech_mech_low_cg"
-                        },
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Bumper",
-                            "id": "pit_tech_mech_bumpers"
-                        }
-                    ]
-                },
-                {
-                    "cycle": false,
-                    "name": "Electrical Quality",
-                    "id": "pit_tech_elec",
-                    "inputs": [
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Accessibility",
-                            "id": "pit_tech_elec_accessibility"
-                        },
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Wiring",
-                            "id": "pit_tech_elec_wiring"
-                        },
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Contact Protection",
-                            "id": "pit_tech_elec_contact_protection"
-                        },
-                        {
-                            "type": "select",
-                            "default": "-",
-                            "negative": true,
-                            "disallow_default": true,
-                            "options": [
-                                "-",
-                                "3",
-                                "2",
-                                "1"
-                            ],
-                            "colors": [
-                                "",
-                                "red",
-                                "yellow",
-                                "green"
-                            ],
-                            "name": "Reliable Condition",
-                            "id": "pit_tech_elec_reliable_condition"
-                        }
-                    ]
-                },
-                {
-                    "cycle": false,
-                    "name": "Other",
-                    "id": "pit_tech_other",
-                    "inputs": [
-                        {
-                            "type": "text",
-                            "default": " ",
-                            "disallow_default": false,
-                            "name": "Notes",
-                            "id": "pit_tech_other_notes"
                         }
                     ]
                 }
